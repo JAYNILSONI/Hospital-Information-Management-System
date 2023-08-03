@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Diagnosis Form</title>
+  <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+        <div id="hospital_info">
+          <h1>Hospital Name</h1>
+          <p>Hospital Address</p>
+          <p>Hospital Gmail | Hospital Website | Hospital Number</p>
+        </div>
+    </div>
+
+  <hr>
+
+  <!-- Body -->
+
+  
+    
+    <form action="/form_newRegistration" method="post" id="newRegistration">
+        <h1>New Patient Registration</h1>
+        <div>
+            <label for="patient_name">Patient Name: </label>
+            <div>
+                
+                <input type="text" name="patient_name" required placeholder="First Name">
+                <input type="text" name="patient_name" required placeholder="Middle Name">
+                <input type="text" name="patient_name" required placeholder="Last Name">
+            </div><br>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required><br>
+
+            <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label><br><br>
+
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="date" name="date_of_birth" required><br><br>
+
+            <div class="con">
+                <label for="phone_num">Phone Number:</label>
+                <label for="email">E-mail:</label>
+
+                <input type="tel" name="phone_num" placeholder="+91 00000-00000">
+                <input type="email" name="email" placeholder="ex: xyz@gmail.com">
+            </div>
+
+            <label for="address">Address:</label>
+            <input type="text" name="address" placeholder="Street Address">
+            <label for=""></label>
+            <input type="text" name="address_line2" placeholder="Street Address Line 2">
+            <label for=""></label>
+            <input type="text" name="city" placeholder="City">
+            <label for=""></label>
+            <input type="text" name="state" placeholder="State">
+            <label for=""></label>
+            <input type="text" name="zip_code" placeholder="Postal / Zip Code"><br><br>
+
+            <label for="marital_status">Marital Status:</label>
+            <select name="marital_status" id="marital_status">
+                <option value="please_select">Please Select</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="legally_separated">Legally Separated</option>
+                <option value="widowed">Widowed</option>
+            </select>
+            
+            <label>Is the Patient younger than 18?</label>
+                <input type="radio" id="yes_y18" name="younger" value="yes" required>
+                <label for="younger">YES</label>
+                <input type="radio" id="no_y18" name="younger" value="no">
+                <label for="younger">NO</label><br><br>
+
+            <h1>Emergency Contact</h1>
+            <hr>
+            <label for="emergency_contact">Emergency Contact:</label>
+            <div class="con">
+                <input type="text" name="emergency_contact_first_name" placeholder="First Name">
+                <input type="text" name="emergency_contact_last_name" placeholder="Last Name">
+            </div>
+            
+            <div class="con">
+                <label for="relationship">Relationship:</label>
+                <label for="contact_num">Contact Number:</label>
+                
+                <input type="text" name="relationship">
+                <input type="tel" name="contact_num" placeholder="+91 00000-00000">
+            </div>
+
+            <label for="family_doc">Family Doctor:</label>
+            <div class="con">
+                <input type="text" name="family_doc_first_name" placeholder="First Name">
+                <input type="text" name="family_doc_last_name" placeholder="Last Name">
+            </div>
+            
+            <label for="contact_num">Family Doctor Contact Number:</label>
+            <input type="tel" name="doc_contact_num" placeholder="+91 00000-00000">
+
+            <h1>Health History</h1>
+            <hr>
+            <label for="reason">Reason for Registration:</label>
+            <input type="text" name="reason">
+
+            <label for="note">Additional Notes:</label>
+            <textarea name="note" id="note" cols="30" rows="10"></textarea>
+
+            <label>Taking any medications, currently?</label>
+                <input type="radio" id="yes_med" name="medications" value="yes" required>
+                <label for="medications">YES</label>
+                <input type="radio" id="no_med" name="medications" value="no">
+                <label for="medications">NO</label>
+
+            <h1>Insurance Information</h1>
+            <hr>
+            <div class="con">
+                <label for="Insurance">Insurance Company:</label>
+                <label for="Insurance_id">Insurance ID:</label>
+                
+                <input type="text" name="Insurance">
+                <input type="text" name="Insurance_id">
+            </div>
+
+            <label for="Policy">Policy Holder's Name:</label>
+            <div class="con">
+                <input type="text" name="Policy" placeholder="First Name">
+                <input type="text" name="Policy" placeholder="Last Name">
+            </div><br>
+
+            
+            <label for="Insurance_data_of_birth">Date of Birth:</label>
+            <input type="date" name="Insurance_data_of_birth">
+            
+
+        </div>
+        <button type="submit">Register</button>
+    </form>
+    <div id="response">
+    </div>
+  </div>
+
+
+  <!-- End -->
+
+</body>
+</html>

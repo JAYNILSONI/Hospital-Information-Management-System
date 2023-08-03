@@ -1,0 +1,103 @@
+/* public/css/style.css */
+body {
+  font-family: "Arial", sans-serif;
+  position: relative;
+  background-image: url("path/to/your/image.jpg"); /* Replace with the path to your hospital background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+}
+
+/* Watermark image */
+.watermark-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2; /* Adjust the opacity to your preference (0.0 to 1.0) */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the container */
+}
+
+.header {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+  padding: 30px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.con{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap:2px 18px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add your cool animations here */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Example animation: Fade-in when the form loads */
+.container {
+  animation: fadeInUp 1s;
+}
+
+input[type="date"] {
+  margin: 5px;
+  background-color: #007bff;
+  color: aliceblue;
+  border-radius: 15px;
+  padding: 4px 8px;
+  border: none;
+}
